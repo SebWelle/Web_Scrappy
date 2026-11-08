@@ -1,0 +1,279 @@
+[
+    {
+        "https://pentest-ground.com:4280/robots.txt": "Critical directory found"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "url": "https://pentest-ground.com:4280/vulnerabilities/fi/?page=%3Cscript%3Ealert%28%27XSS-Test%27%29%3C%2Fscript%3E",
+        "vulnerability": "None"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[+]",
+        "X-Frame-Options": "[+]",
+        "X-Content-Type-Options": "[+]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[+]",
+        "X-Frame-Options": "[+]",
+        "X-Content-Type-Options": "[+]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[-]",
+        "X-Frame-Options": "[-]",
+        "X-Content-Type-Options": "[-]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[+]",
+        "X-Frame-Options": "[+]",
+        "X-Content-Type-Options": "[+]"
+    },
+    {
+        "https://pentest-ground.com:4280/admin": "Nothing found",
+        "https://pentest-ground.com:4280/.git/config": "Nothing found",
+        "https://pentest-ground.com:4280/.env": "Nothing found"
+    },
+    {
+        "Strict-Transport-Security": "[+]",
+        "X-Frame-Options": "[+]",
+        "X-Content-Type-Options": "[+]"
+    }
+]

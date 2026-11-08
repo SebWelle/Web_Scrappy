@@ -24,14 +24,22 @@ def check_xss(url):
             dic_string, 
             parsed_url.fragment
         ))
+
     
     try:
         response = requests.get(attacking_url, timeout=5)
 
         if payload in response.text:
-            print(f"[!] Found XSS security gap at: {attacking_url}")
+            return {
+                "url": attacking_url,
+                "vulnerability": "Reflected XSS",
+                "severity": "High"
+            }
         else:
-            print(f"[-] Didn't find a security gap at: {url}")
+            return {
+                "url": attacking_url,
+                "vulnerability": "None"
+            }
             
     except requests.exceptions.RequestException:
         print("[-] Connection failed during XSS check.")

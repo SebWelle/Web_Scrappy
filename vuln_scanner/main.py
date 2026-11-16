@@ -23,16 +23,17 @@ print(f"Starting scan for: {args.url}")
 try:
     response = requests.get(args.url, timeout=5)
     print(f"Status-Code: {response.status_code}")
-
 except requests.exceptions.RequestException as e:
     print(f"Url wasn't found. Reason: {e}")
+    exit()
 
 text = response.text
 
 directories_found, directories_hidden = check_hidden_paths(args.url)
 if directories_found:
     scan_results.append(directories_found)
-    
+if directories_hidden:
+    scan_results.append(directories_hidden)
 
 found_links = extract_links(text, args.url)
 
@@ -41,23 +42,17 @@ for link in found_links:
     try:
         response = requests.get(link, timeout=5)
 
-
         xss_result = check_xss(link)
         if xss_result:  
             scan_results.append(xss_result)
 
-        if directories_hidden:
-            scan_results.append(directories_hidden)
-
-        headers_result = check_security_headers(response.headers)
+        headers_result = check_security_headers(response)
         if headers_result:
             scan_results.append(headers_result)
-
-        
-
-        save_json_report(scan_results)
             
-        
     except requests.exceptions.RequestException as e:
         print("[-] Url wasn't found or timed out.")
-            
+
+
+save_json_report(scan_results)
+print("\n[+] Scan finished. Report saved.")

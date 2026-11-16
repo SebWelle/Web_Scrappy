@@ -38,6 +38,11 @@ def main():
         print(f"Url wasn't found. Reason: {e}")
         return
 
+    # Scan the start page itself, otherwise its headers are never checked.
+    homepage_headers = check_security_headers(response)
+    if homepage_headers:
+        scan_results.append(homepage_headers)
+
     directories_found, directories_hidden = check_hidden_paths(target, session)
     if directories_found:
         scan_results.append(directories_found)
@@ -45,7 +50,9 @@ def main():
         scan_results.append(directories_hidden)
 
     robot_rules = robots.load_rules(target, session)
-    found_links = extract_links(response.text, target)
+    # Use response.url (the URL after any redirects, e.g. to www.) as the base
+    # so the same-domain filter in extract_links does not discard every link.
+    found_links = extract_links(response.text, response.url)
 
     for link in found_links:
         if not robot_rules.can_fetch(USER_AGENT, link):

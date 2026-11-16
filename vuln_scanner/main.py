@@ -1,58 +1,75 @@
 import argparse
+
 import requests
+
 from modules.headers import check_security_headers
 from modules.crawler import extract_links
 from modules.directories import check_hidden_paths
 from modules.xss import check_xss
 from modules.reporter import save_json_report
-from bs4 import BeautifulSoup
+from modules.http_client import new_session, USER_AGENT
+from modules import robots
 
 
-scan_results = []
+def parse_args():
+    parser = argparse.ArgumentParser(description="Simple web vulnerability scanner.")
+    parser.add_argument('-u', '--url', required=True, help="Target URL to scan.")
+    return parser.parse_args()
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-u', '--url', required=True)
-args = parser.parse_args()
+
+def normalize_url(url):
+    if not url.startswith(('http://', 'https://')):
+        url = 'https://' + url
+    return url
 
 
-if not args.url.startswith(('http://', 'https://')):
-    args.url = 'https://' + args.url
+def main():
+    args = parse_args()
+    target = normalize_url(args.url)
+    session = new_session()
+    scan_results = []
 
-print(f"Starting scan for: {args.url}")
+    print(f"Starting scan for: {target}")
 
-try:
-    response = requests.get(args.url, timeout=5)
-    print(f"Status-Code: {response.status_code}")
-except requests.exceptions.RequestException as e:
-    print(f"Url wasn't found. Reason: {e}")
-    exit()
-
-text = response.text
-
-directories_found, directories_hidden = check_hidden_paths(args.url)
-if directories_found:
-    scan_results.append(directories_found)
-if directories_hidden:
-    scan_results.append(directories_hidden)
-
-found_links = extract_links(text, args.url)
-
-for link in found_links:
-    print(f"\n[*] Check for: {link}")
     try:
-        response = requests.get(link, timeout=5)
-
-        xss_result = check_xss(link)
-        if xss_result:  
-            scan_results.append(xss_result)
-
-        headers_result = check_security_headers(response)
-        if headers_result:
-            scan_results.append(headers_result)
-            
+        response = session.get(target, timeout=5)
+        print(f"Status-Code: {response.status_code}")
     except requests.exceptions.RequestException as e:
-        print("[-] Url wasn't found or timed out.")
+        print(f"Url wasn't found. Reason: {e}")
+        return
+
+    directories_found, directories_hidden = check_hidden_paths(target, session)
+    if directories_found:
+        scan_results.append(directories_found)
+    if directories_hidden:
+        scan_results.append(directories_hidden)
+
+    robot_rules = robots.load_rules(target, session)
+    found_links = extract_links(response.text, target)
+
+    for link in found_links:
+        if not robot_rules.can_fetch(USER_AGENT, link):
+            print(f"\n[*] Skipping (blocked by robots.txt): {link}")
+            continue
+
+        print(f"\n[*] Check for: {link}")
+        try:
+            response = session.get(link, timeout=5)
+
+            xss_result = check_xss(link, session)
+            if xss_result:
+                scan_results.append(xss_result)
+
+            headers_result = check_security_headers(response)
+            if headers_result:
+                scan_results.append(headers_result)
+
+        except requests.exceptions.RequestException:
+            print("[-] Url wasn't found or timed out.")
+
+    save_json_report(scan_results)
+    print("\n[+] Scan finished. Report saved.")
 
 
-save_json_report(scan_results)
-print("\n[+] Scan finished. Report saved.")
+if __name__ == "__main__":
+    main()

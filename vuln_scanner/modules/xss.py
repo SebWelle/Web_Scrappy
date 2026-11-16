@@ -1,7 +1,8 @@
 import requests
 from urllib.parse import urlparse, parse_qs, urlencode,urlunparse
 
-def check_xss(url):
+def check_xss(url, session=None):
+    http = session or requests
     parsed_url = urlparse(url)
 
     if not parsed_url.query:
@@ -27,7 +28,7 @@ def check_xss(url):
 
     
     try:
-        response = requests.get(attacking_url, timeout=5)
+        response = http.get(attacking_url, timeout=5)
 
         if payload in response.text:
             return {
